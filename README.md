@@ -1,6 +1,6 @@
 # AI Agent with Hybrid Persistent Vector Memory
 
-An autonomous, tool-calling AI agent framework built from scratch in Python, powered by local LLMs via Ollama (or OpenAI-compatible APIs). Features automatic JSON schema generation from native Python type hints, runtime context injection, and a persistent hybrid memory system combining semantic vector search with categorized exact key-value retrieval.
+A fully autonomous, tool-calling AI agent framework **built entirely from scratch in pure Python** with **zero reliance on heavyweight third-party frameworks** (no LangChain, CrewAI, LlamaIndex, or AutoGen). Powered by local LLMs via Ollama (or any OpenAI-compatible API), this project implements every core agentic primitive from the ground up: dynamic reflection-based JSON schema generation from native Python type hints, seamless runtime context and dependency injection, and a persistent hybrid memory system combining dense vector semantic search with categorized exact key-value retrieval.
 
 ---
 
