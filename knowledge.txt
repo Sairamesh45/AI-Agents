@@ -1,0 +1,10 @@
+Python is a high-level programming language.
+Python was created by Guido van Rossum.
+Python emphasizes code readability and simplicity.
+
+Java is a general-purpose programming language.
+Java was originally developed at Sun Microsystems.
+Java programs run on the Java Virtual Machine.
+
+RAG stands for Retrieval-Augmented Generation.
+RAG allows an LLM to retrieve relevant information from external documents before generating an answer.
