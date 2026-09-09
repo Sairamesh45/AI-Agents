@@ -1,29 +1,29 @@
-# AI Agent with Hybrid Persistent Vector Memory 🧠🤖
+# AI Agent with Hybrid Persistent Vector Memory
 
 An autonomous, tool-calling AI agent framework built from scratch in Python, powered by local LLMs via Ollama (or OpenAI-compatible APIs). Features automatic JSON schema generation from native Python type hints, runtime context injection, and a persistent hybrid memory system combining semantic vector search with categorized exact key-value retrieval.
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 
-- [Overview](#-overview)
-- [Key Features](#-key-features)
-- [Architecture & Flow](#-architecture--flow)
-- [Project Structure](#-project-structure)
-- [Prerequisites & Setup](#-prerequisites--setup)
-- [Quickstart Guide](#-quickstart-guide)
-- [Core Components](#-core-components)
+- [Overview](#overview)
+- [Key Features](#key-features)
+- [Architecture & Flow](#architecture--flow)
+- [Project Structure](#project-structure)
+- [Prerequisites & Setup](#prerequisites--setup)
+- [Quickstart Guide](#quickstart-guide)
+- [Core Components](#core-components)
   - [1. Agent Orchestrator (`Agent`)](#1-agent-orchestrator-agent)
   - [2. Hybrid Memory System (`Memory`)](#2-hybrid-memory-system-memory)
   - [3. Dynamic Tool Interface (`Tool`)](#3-dynamic-tool-interface-tool)
-- [Memory Taxonomy & Best Practices](#-memory-taxonomy--best-practices)
-- [Built-in Tools Reference](#-built-in-tools-reference)
-- [Extending the Agent (Creating Custom Tools)](#-extending-the-agent-creating-custom-tools)
-- [License & Contributing](#-license--contributing)
+- [Memory Taxonomy & Best Practices](#memory-taxonomy--best-practices)
+- [Built-in Tools Reference](#built-in-tools-reference)
+- [Extending the Agent (Creating Custom Tools)](#extending-the-agent-creating-custom-tools)
+- [License & Contributing](#license--contributing)
 
 ---
 
-## 🌟 Overview
+## Overview
 
 This project implements a fully self-contained Agentic AI loop without heavyweight third-party agent frameworks (e.g. LangChain, CrewAI). It demonstrates how to build:
 
@@ -34,21 +34,21 @@ This project implements a fully self-contained Agentic AI loop without heavyweig
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
-- 🔄 **Autonomous Execution Loop**: Handles multi-turn tool calling until a final answer is generated (up to a configurable maximum iteration limit).
-- 🧬 **Reflection-based Tool Schemas**: No manual JSON schema writing. Decorated/wrapped Python functions are converted into JSON schemas dynamically.
-- 💉 **Smart Context Injection**: Tools declaring a `memory` parameter automatically receive the agent's memory instance at runtime.
-- 🔍 **Hybrid Retrieval**:
+- **Autonomous Execution Loop**: Handles multi-turn tool calling until a final answer is generated (up to a configurable maximum iteration limit).
+- **Reflection-based Tool Schemas**: No manual JSON schema writing. Decorated/wrapped Python functions are converted into JSON schemas dynamically.
+- **Smart Context Injection**: Tools declaring a `memory` parameter automatically receive the agent's memory instance at runtime.
+- **Hybrid Retrieval**:
   - **Vector Semantic Search**: Cosine similarity against stored dense embeddings with configurable thresholds (`threshold=0.55`).
   - **Exact Key Recall**: High-precision O(1) recall for known keys.
   - **Category-based Filtering**: Partition memories by logical categories (`identity`, `preference`, `personal`, `context`, `other`).
-- 💾 **Session Persistence**: Memory automatically reads from and writes to `memory.json`.
-- 🦙 **Local LLM First**: Pre-configured for Ollama (`qwen3:4b` / `Qwen3-Embedding:4B`), but fully compatible with any OpenAI API endpoint.
+- **Session Persistence**: Memory automatically reads from and writes to `memory.json`.
+- **Local LLM First**: Pre-configured for Ollama (`qwen3:4b` / `Qwen3-Embedding:4B`), but fully compatible with any OpenAI API endpoint.
 
 ---
 
-## 🏛 Architecture & Flow
+## Architecture & Flow
 
 ### Agent Execution Lifecycle
 
@@ -113,7 +113,7 @@ graph TD
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 .
@@ -129,7 +129,7 @@ graph TD
 
 ---
 
-## ⚙️ Prerequisites & Setup
+## Prerequisites & Setup
 
 ### 1. Prerequisites
 
@@ -174,7 +174,7 @@ EMBEDDING_MODEL_NAME="Qwen3-Embedding:4B"
 
 ---
 
-## 💻 Quickstart Guide
+## Quickstart Guide
 
 ### Running via Jupyter Notebook
 
@@ -210,7 +210,7 @@ AI: The current time is 2026-09-09 10:15:00, and 144 divided by 12 equals 12.
 
 ---
 
-## 🧩 Core Components
+## Core Components
 
 ### 1. Agent Orchestrator (`Agent`)
 
@@ -311,7 +311,7 @@ Generated OpenAI Tool Schema:
 
 ---
 
-## 🏷 Memory Taxonomy & Best Practices
+## Memory Taxonomy & Best Practices
 
 The agent prompt is tuned to classify stored memories into 5 distinct categories:
 
@@ -332,7 +332,7 @@ The agent prompt is tuned to classify stored memories into 5 distinct categories
 
 ---
 
-## 🛠 Built-in Tools Reference
+## Built-in Tools Reference
 
 | Tool Name | Underlying Function | Description |
 | :--- | :--- | :--- |
@@ -348,7 +348,7 @@ The agent prompt is tuned to classify stored memories into 5 distinct categories
 
 ---
 
-## 🔌 Extending the Agent (Creating Custom Tools)
+## Extending the Agent (Creating Custom Tools)
 
 Adding new tools requires only standard Python functions with type annotations:
 
@@ -375,7 +375,7 @@ The agent will automatically generate the schema, make the tool available to the
 
 ---
 
-## 📄 Documentation
+## Documentation
 
 For in-depth guides, refer to the `docs/` folder:
 - [Architecture & Execution Subsystem](docs/ARCHITECTURE.md)
@@ -383,7 +383,7 @@ For in-depth guides, refer to the `docs/` folder:
 
 ---
 
-## 🤝 Contributing & License
+## Contributing & License
 
 Contributions, issues, and feature requests are welcome!
 Feel free to submit a pull request or open an issue for new tools, memory backends (e.g. SQLite, ChromaDB, PGVector), or UI integrations.

@@ -1,4 +1,4 @@
-# Technical Architecture Documentation 🏗️
+# Technical Architecture Documentation
 
 This document provides a detailed breakdown of the technical design, execution loop, type reflection engine, and context injection pattern powering the AI Agent framework.
 

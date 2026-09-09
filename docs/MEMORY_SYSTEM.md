@@ -1,4 +1,4 @@
-# Hybrid Vector & Categorical Memory System 🧠
+# Hybrid Vector & Categorical Memory System
 
 This document details the design, mathematical foundations, data structure, and search algorithms of the agent's persistent memory subsystem.
 
