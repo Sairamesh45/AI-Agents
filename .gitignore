@@ -1,1 +1,24 @@
+# Environment variables
 .env
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Local documents folder
+files/
+
+# Local vector store and memory data
+vector_store.faiss
+vector_store.json
+memory.json
